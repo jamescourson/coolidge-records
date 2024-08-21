@@ -1,0 +1,287 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Rusty Nails</title>
+<link href="../_css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="../_css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../_script/respond.min.js"></script>
+
+
+
+
+
+<!--script for mobile nav-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+
+	/* prepend menu icon */
+	$('#mobileNav').prepend('<div id="menu-icon"><span class="padLeft">Site Menu</span></div>');
+	
+	/* toggle nav */
+	$("#menu-icon").on("click", function(){
+		$("#navM").slideToggle();
+		$(this).toggleClass("active");
+	});
+
+});
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+            if(document.createEvent("TouchEvent")) { // using document.createEvent is more reliable than navigator (Modernizr uses this practice)
+                $("a.2click").each(function() { // have to use an `each` here - either a jQuery `each` or a `for(...)` loop
+                    var onClick; // this will be a function
+                    var firstClick = function() {
+                        $("a.2click").trigger("JWUnhover"); // triggering hoverfix reset if any link gets touched
+
+                        onClick = secondClick;
+                        return false;
+                    };
+                    secondClick = function() {
+                        onClick = firstClick;
+                        return true;
+                    };
+                    onClick = firstClick;
+                    $(this).click(function() {
+                        return onClick();
+                    });
+                    $(this).bind('JWUnhover', function(){ onClick = firstClick; });
+                });
+            }
+        });
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+
+
+<!--end of script for mobile nav-->
+
+<!--Google Analytics-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48489222-1', 'coolidgerecords.com');
+  ga('send', 'pageview');
+
+</script>
+<!--end analytics-->
+
+</head>
+<body onLoad="MM_preloadImages('../_images/about-active.jpg','../_images/about-active-lg.jpg','../_images/mail-active.png','../_images/fb-active.png','../_images/listen-active.png','../_images/speedwell-release-active.png','../_images/artists-active.jpg','../_images/catalog-active.jpg','../_images/release-active.jpg','../_images/contact-active.jpg','../_images/artistsLg-active.jpg','../_images/catalog-active-lg.jpg','../_images/release-active-lg.jpg','../_images/contact-active-lg.jpg','../_images/Anthrophobia-hover.jpg','../_images/Beatnik-Termites-hover.jpg','../_images/clem-hover.jpg','../_images/crop-circle-hover.jpg','../_images/deerheart-hover.jpg','../_images/EDO-hover.jpg','../_images/gladys-hover.jpg','../_images/jake-and-the-stiffs-hover.jpg','../_images/kingdom-of-rust-hover.jpg','../_images/LCP-hover.jpg','../_images/meatjack-hover.jpg','../_images/mildreds-hover.jpg','../_images/plow-united-hover.jpg','../_images/scribbler-hover.jpg','../_images/the-rusty-nails-hover.jpg','../_images/snagglepuss-hover.jpg','../_images/soccer-hover.jpg','../_images/soda-can-hover.jpg','../_images/speedwell-band-hover.jpg','../_images/squatweiler-hover.jpg','../_images/stranglmartin-hover.jpg','../_images/super-hi-five-hover.jpg','../_images/tallman-hover.jpg','../_images/treiops-treyfid-hover.jpg','../_images/weston-hover.jpg','../_images/facebook-RO.jpg','../_images/reverbnation-rollover.jpg')">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="mobileNav">
+
+	<ul id="navM">
+		<li><a href="../index.html">Home</a></li>
+		<li class="current"><a href="../Coolidge-Records-Artists.html">Artists</a></li>
+		<li><a href="../Coolidge-Records-Catalog.html">Catalog</a></li>
+		<li><a href="../Coolidge-Records-New-Releases.html">New Releases</a></li>
+        <li><a href="../Contact-Coolidge-Records.html">Contact Us</a></li>
+	</ul>
+</div><!--end mobileNav-->
+<div class="gridContainer clearfix">
+ <header>  
+  <div id="navLogosm"><img src="../_images/coolidge-logo-small.png" alt="Coolidge Records" name="coolidgeLogo" id="coolidgeLogo">
+  </div><!--end navLogosm-->
+<div id="navLogomid">
+<div id="midEmail"><a href="mailto:coolidgerecords@gmail.com?subject=web-inquiry"><img src="../_images/mail.png" alt="Email Coolidge Records" name="emailTablet" id="emailTablet" onMouseOver="MM_swapImage('emailTablet','','../_images/mail-active.png',1)" onMouseOut="MM_swapImgRestore()"></a>
+</div><!--end midEmail-->
+<div id="midLogo"><img src="../_images/coolidge-logo.png" name="coolidgeLogot" id="coolidgeLogot">
+</div><!--end midLogo-->
+<div id="midFb">
+<a href="http://www.youtube.com/channel/UC2zDBqzDJ1XnWWWL7zMq1pg" target="_blank"><img src="../_images/you-tube-icon.png" alt="Coolidge Records on YouTube" name="ytTablet" id="ytTablet" onMouseOver="MM_swapImage('ytTablet','','../_images/you-tube-icon-RO.png',1)" onMouseOut="MM_swapImgRestore()">  </a>
+<a href="https://www.facebook.com/pages/Coolidge-Records/321565914618851" target="_blank"><img src="../_images/fb.png" alt="Coolidge Records on facebook" name="fbTablet" id="fbTablet" onMouseOver="MM_swapImage('fbTablet','','../_images/fb-active.png',1)" onMouseOut="MM_swapImgRestore()"></a>
+</div><!--end midFb-->
+</div><!--end navLogomid-->
+  <div id="navContent">
+    <div id="navLogo"><img src="../_images/coolidge-logo.png" name="coolidge" id="coolidge">
+    </div><!--end navLogo-->
+    <div id="navSocial">
+    <div class="mail"><a href="mailto:coolidgerecords@gmail.com?subject=web-inquiry"><img src="../_images/mail.png" alt="Email Coolidge records" name="mailMid" width="60" height="60" id="mailMid" onMouseOver="MM_swapImage('mailMid','','../_images/mail-active.png',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="youTube"><a href="http://www.youtube.com/channel/UC2zDBqzDJ1XnWWWL7zMq1pg" target="_blank"><img src="../_images/you-tube-icon.png" alt="Coolidge Records on YouTube" name="ytMid" width="60" height="60" id="ytMid" onMouseOver="MM_swapImage('ytMid','','../_images/you-tube-icon-RO.png',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="fb"><a href="https://www.facebook.com/pages/Coolidge-Records/321565914618851" target="_blank"><img src="../_images/fb.png" alt="Coolidge on Facebook" name="fbMid" width="60" height="60" id="fbMid" onMouseOver="MM_swapImage('fbMid','','../_images/fb-active.png',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    </div><!--end navSocial-->
+    <nav>  
+    <div id="navMid">  
+   <div class="home"><a href="../index.html"><img src="../_images/home.jpg" alt="Coolidge Records Home" name="homeMid" id="homeMid"></a></div>
+   <div class="bands"><a href="../Coolidge-Records-Artists.html"><img src="../_images/artists-active.jpg" alt="Coolidge Records Home" name="bandsMid" id="bandsMid" onMouseOver="MM_swapImage('bandsMid','','../_images/artists-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="catalog"><a href="../Coolidge-Records-Catalog.html"><img src="../_images/catalog.jpg" alt="Coolidge Records Catalog" name="catalogMid" id="catalogMid" onMouseOver="MM_swapImage('catalogMid','','../_images/catalog-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="release"><a href="../Coolidge-Records-New-Releases.html"><img src="../_images/release.jpg" alt="Coolidge Records New Releases" name="releaseMid" id="releaseMid" onMouseOver="MM_swapImage('releaseMid','','../_images/release-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>    
+    <div class="contact"><a href="../Contact-Coolidge-Records.html"><img src="../_images/contact.jpg" alt="Contact Coolidge Records" name="contactMid" id="contactMid" onMouseOver="MM_swapImage('contactMid','','../_images/contact-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+      </div><!--end navMid-->
+      <div id="navLg">
+      <div class="home"><a href="../index.html"><img src="../_images/homeLg.jpg" alt="Coolidge Records Home" name="homeLg" id="homeLg"></a></div>
+      <div class="bands"><a href="../Coolidge-Records-Artists.html"><img src="../_images/artistsLg-active.jpg" alt="Coolidge Records Home" name="bandsLg" id="bandsLg" onMouseOver="MM_swapImage('bandsLg','','../_images/artistsLg-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+     <div class="catalog"><a href="../Coolidge-Records-Catalog.html"><img src="../_images/catalogLg.jpg" alt="Coolidge Records Catalog" name="catalogLg" id="catalogLg" onMouseOver="MM_swapImage('catalogLg','','../_images/catalog-active-lg.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+     <div class="release"><a href="../Coolidge-Records-New-Releases.html"><img src="../_images/release-lg.jpg" alt="Coolidge Records New Releases" name="releaseLg" id="releaseLg" onMouseOver="MM_swapImage('releaseLg','','../_images/release-active-lg.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+     <div class="contact"><a href="../Contact-Coolidge-Records.html"><img src="../_images/contactLg.jpg" alt="Contact Coolidge Records" name="contactLg" id="contactLg" onMouseOver="MM_swapImage('contactLg','','../_images/contact-active-lg.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+      </div><!--end navLg-->
+      </nav>
+    </div><!--end navContent-->
+  </header>
+  <div id="mainContent2">
+  
+   <div id="column1">
+ <h1 class="bandTitle">The Rusty Nails<br>
+   (formerly Haggis)</h1>
+ <img src="../_images/the-rusty-nails-page.jpg" alt="The Rusty Nails"> 
+    <h2 class="title">BIO</h2>
+    <p align="center">The Rusty Nails was originally just an idea founded by one Brett Alexander Boye. Early on starting around 1995 or so, he put together some 4-track recordings involving bagpipes with various derivatives of rock music. The first official record that came out was a self-titled album (released 1996) which he recorded all the instruments himself. Brett refers to this as a sort of "demo" type of record which spawned a couple of good tracks but certainly had its rough spots. Nonetheless, the idea was born.</p>
+    <p align="center">Not too long thereafter, this idea formed into a rock band which was mainly based in Philadelphia, PA. Many local shows in and around Philly as well as some tours small and large ensued. The band "era" lasted from around 1997 to the end of 2002 during which two and a half more albums were released (No Miracles In Ruins in 1999, Aftertax/The Rusty Nails split in 2000 and Vestiges in 2002). Please note that archival footage of the band on tour (and thus the names of all the members and other interesting tidbits) may be posted on the website (or linked from the website) in the future.</p>
+    <p align="center">Despite the band breaking up, the idea still lingered on and two other albums were created and released: "The New Colony" and more recently "Nonlocality." Yet again all of the instruments were recorded by Brett. Clearly, there was some sort of awakening that influenced these two records as well as other pursuits outside of the albums made. He went on to co-found The Irma Freeman Center For Imagination in Pittsburgh, PA which had its official opening in October, 2009. It was then that Brett also debuted "The Rusty Nail(s)' Bagpipe Picture Show" which is a one-man version of The Rusty Nails. </p>
+    <p align="center">Whether it takes the form of a "one-person show" or an actual band, the goal, now more than ever, is to continue to explore, experiment and create music for the sake of healing and to help raise the spirits of all humans away from fear and towards whatever it is they love. </p>
+    <p>&nbsp;</p>
+   </div><!--end column1-->
+   <div id="column2">
+  <div id="column2a">
+  <h2 class="title">COOLIDGE Releases</h2>
+  <span class="releaseCover"><a href="The-Rusty-Nails-History-in-the-Rust-Vol-One.html"><img src="../_images/Rusty-Nail-History-in-the-Rust.jpg" alt="The Rusty Nails &quot;History in the Rust, Vol. One&quot;"></a></span><span class="releaseText">
+  <p><a href="The-Rusty-Nails-History-in-the-Rust-Vol-One.html" title="The Rusty Nails &quot;History in the Rust, Vol. One&quot;">&quot;History in the Rust, Vol. One&quot;<br>
+Catalog #:    CR0101</a></p>
+  </span>
+  </div><!--end column2a-->
+  
+    <div id="column2a">
+  <span class="releaseCover"><a href="The-Rusty-Nails-Nonlocality.html"><img src="../_images/Rusty-Nails-Nonlocality.jpg" alt="The Rusty Nails &quot;Nonlocality&quot;"></a></span><span class="releaseText">
+  <p><a href="The-Rusty-Nails-Nonlocality.html" title="The Rusty Nails &quot;Nonlocality&quot;">&quot;Nonlocality&quot;<br>
+Catalog #:    CR0099</a></p>
+  </span>
+  </div><!--end column2a-->
+  
+      <div id="column2a">
+  <span class="releaseCover"><a href="The-Rusty-Nails-The-New-Colony.html"><img src="../_images/Rusty-Nails-New-Colony.jpg" alt="The Rusty Nails &quot;The New Colony&quot;"></a></span><span class="releaseText">
+  <p><a href="The-Rusty-Nails-The-New-Colony.html" title="The Rusty Nails &quot;The New Colony&quot;">&quot;The New Colony&quot;<br>
+Catalog #:    CR0041</a></p>
+  </span>
+  </div><!--end column2a-->
+  
+        <div id="column2a">
+  <span class="releaseCover"><a href="The-Rusty-Nails-Vestiges.html"><img src="../_images/Rusty-Nails-Vestiges.jpg" alt="The Rusty Nails &quot;Vestiges&quot;"></a></span><span class="releaseText">
+  <p><a href="The-Rusty-Nails-Vestiges.html" title="The Rusty Nails &quot;Vestiges&quot;">&quot;Vestiges&quot;<br>
+Catalog #:    CR0038</a></p>
+  </span>
+  </div><!--end column2a-->
+  
+          <div id="column2a">
+  <span class="releaseCover"><a href="Aftertax-and-The-Rusty-Nails-Split.html"><img src="../_images/Aftertax-Rusty-Nails-Split.jpg" alt="Aftertax / The Rusty Nails Split"></a></span><span class="releaseText">
+  <p><a href="Aftertax-and-The-Rusty-Nails-Split.html" title="Aftertax / The Rusty Nails Split">&quot;Aftertax / The Rusty Nails Split&quot;<br>
+Catalog #:    CR0036</a></p>
+  </span>
+  </div><!--end column2a-->
+  
+            <div id="column2a">
+  <span class="releaseCover"><a href="The-Rusty-Nails-No-Miracle-in-Ruins.html"><img src="../_images/rusty-nails-No-Miracle-In-Ruins.jpg" alt="The Rusty Nails &quot;No Miracle In Ruins&quot;"></a></span><span class="releaseText">
+  <p><a href="The-Rusty-Nails-No-Miracle-in-Ruins.html" title="The Rusty Nails &quot;No Miracle In Ruins&quot;">&quot;No Miracle In Ruins&quot;<br>
+Catalog #:    CR0034</a></p>
+  </span>
+  </div><!--end column2a-->
+  
+              <div id="column2a">
+  <span class="releaseCover"><a href="The-Rusty-Nails-Self-Titled.html"><img src="../_images/rusty-nails-self-titled.jpg" alt="The Rusty Nails &quot;The Rusty Nails&quot;"></a></span><span class="releaseText">
+  <p><a href="The-Rusty-Nails-Self-Titled.html" title="The Rusty Nails &quot;The Rusty Nails&quot;">&quot;The Rusty Nails&quot;<br>
+Catalog #:    CR0022</a></p>
+  </span>
+  </div><!--end column2a-->
+
+  <div id="column2a">
+  <h2 class="title">As Haggis</h2>
+  <span class="releaseCover"><a href="Haggis-Monument.html"><img src="../_images/haggis-Monument.jpg" alt="Haggis “Monument”"></a></span><span class="releaseText">
+  <p><a href="Haggis-Monument.html" title="Haggis “Monument”">Haggis &quot;Monument&quot;<br>
+Catalog #:    CR0006</a></p>
+  </span>
+  </div><!--end column2a-->
+
+ <div id="column2a">
+  <h2 class="title">As Spongegod</h2>
+  <span class="releaseCover"><a href="Spongegod-Mimi-Rogers.html"><img src="../_images/spongegod-mimi-rogers.jpg" alt="Spongegod &quot;Mimi Rogers&quot;"></a></span><span class="releaseText">
+  <p><a href="Spongegod-Mimi-Rogers.html" title="Spongegod &quot;Mimi Rogers&quot;">Spongegod &quot;Mimi Rogers&quot;<br>
+Catalog #:    CR0003</a></p>
+  </span>
+  </div><!--end column2a-->
+
+    <div id="column2a"> 
+    <h2 class="title">MORE INFO</h2>
+<div id="subColumn1">
+      <p>Band Website: <a href="http://www.therustynails.net/" title="The Rusty Nails" target="_blank">www.therustynails.net</a></p>
+  </div><!--end subColumn1-->
+  
+  </div><!--end column2a-->
+ </div><!--end column2-->
+</div><!--end mainContent-->
+<footer>
+  <div id="footerCont">
+  <h3>Coolidge Records</h3>
+  <p>5002 Penn Avenue, Pittsburgh, PA 15224</p>
+  <div id="footerNav">
+  <ul>
+  <li><a href="../index.html">Home</a></li>
+   <li><a href="../Coolidge-Records-Artists.html">Artists</a></li>
+  <li><a href="../Coolidge-Records-Catalog.html">Catalog</a></li>
+  <li><a href="../Coolidge-Records-New-Releases.html">New Releases</a></li>
+  <li><a href="../Contact-Coolidge-Records.html">Contact</a></li>
+  </ul>
+  </div><!--end footerNav-->
+  </div><!--end footerCont-->
+</footer>
+</div><!--end gridContainer clearfix-->
+
+</body>
+</html>

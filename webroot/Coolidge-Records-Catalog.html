@@ -1,0 +1,729 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coolidge Records - Catalog</title>
+<link href="_css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="_css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="_script/respond.min.js"></script>
+
+
+
+
+
+<!--script for mobile nav-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+
+	/* prepend menu icon */
+	$('#mobileNav').prepend('<div id="menu-icon"><span class="padLeft">Site Menu</span></div>');
+	
+	/* toggle nav */
+	$("#menu-icon").on("click", function(){
+		$("#navM").slideToggle();
+		$(this).toggleClass("active");
+	});
+
+});
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+            if(document.createEvent("TouchEvent")) { // using document.createEvent is more reliable than navigator (Modernizr uses this practice)
+                $("a.2click").each(function() { // have to use an `each` here - either a jQuery `each` or a `for(...)` loop
+                    var onClick; // this will be a function
+                    var firstClick = function() {
+                        $("a.2click").trigger("JWUnhover"); // triggering hoverfix reset if any link gets touched
+
+                        onClick = secondClick;
+                        return false;
+                    };
+                    secondClick = function() {
+                        onClick = firstClick;
+                        return true;
+                    };
+                    onClick = firstClick;
+                    $(this).click(function() {
+                        return onClick();
+                    });
+                    $(this).bind('JWUnhover', function(){ onClick = firstClick; });
+                });
+            }
+        });
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+
+
+<!--end of script for mobile nav-->
+	<!-- jquery -->	
+	<script src="_script/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<!-- easing plugin ( optional ) -->
+	<script src="_script/easing.js" type="text/javascript"></script>
+	<!-- UItoTop plugin -->
+	<script src="_script/jquery.ui.totop.js" type="text/javascript"></script>
+	<!-- Starting the plugin -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+	 		};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+    
+    <!--Google Analytics-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48489222-1', 'coolidgerecords.com');
+  ga('send', 'pageview');
+
+</script>
+<!--end analytics-->
+
+
+</head>
+<body onLoad="MM_preloadImages('_images/about-active.jpg','_images/about-active-lg.jpg','_images/mail-active.png','_images/fb-active.png','_images/listen-active.png','_images/speedwell-release-active.png','_images/release-active.jpg','_images/contact-active.jpg','_images/artistsLg-active.jpg','_images/release-active-lg.jpg','_images/contact-active-lg.jpg','_images/scribbler-hover.jpg','_images/weston-hover.jpg','_images/home-active.jpg','_images/artists-active.jpg','_images/home-active-lg.jpg')">
+<div id="mobileNav">
+
+	<ul id="navM">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Coolidge-Records-Artists.html">Artists</a></li>
+		<li class="current"><a href="#">Catalog</a></li>
+		<li><a href="Coolidge-Records-New-Releases.html">New Releases</a></li>
+    <li><a href="Contact-Coolidge-Records.html">Contact Us</a></li>
+	</ul>
+</div><!--end mobileNav-->
+<div class="gridContainer clearfix">
+ <header>  
+  <div id="navLogosm"><img src="_images/coolidge-logo-small.png" alt="Coolidge Records" name="coolidgeLogo" id="coolidgeLogo">
+  </div><!--end navLogosm-->
+<div id="navLogomid">
+<div id="midEmail"><a href="mailto:coolidgerecords@gmail.com?subject=web-inquiry"><img src="_images/mail.png" alt="Email Coolidge Records" name="emailTablet" id="emailTablet" onMouseOver="MM_swapImage('emailTablet','','_images/mail-active.png',1)" onMouseOut="MM_swapImgRestore()"></a>
+</div><!--end midEmail-->
+<div id="midLogo"><img src="_images/coolidge-logo.png" name="coolidgeLogot" id="coolidgeLogot">
+</div><!--end midLogo-->
+<div id="midFb"><a href="http://www.youtube.com/channel/UC2zDBqzDJ1XnWWWL7zMq1pg" target="_blank"><img src="_images/you-tube-icon.png" alt="Coolidge Records on YouTube" name="ytTablet" id="ytTablet" onMouseOver="MM_swapImage('ytTablet','','_images/you-tube-icon-RO.png',1)" onMouseOut="MM_swapImgRestore()">  </a><a href="https://www.facebook.com/pages/Coolidge-Records/321565914618851" target="_blank"><img src="_images/fb.png" alt="Coolidge Records on facebook" name="fbTablet" id="fbTablet" onMouseOver="MM_swapImage('fbTablet','','_images/fb-active.png',1)" onMouseOut="MM_swapImgRestore()"></a>
+</div><!--end midFb-->
+</div><!--end navLogomid-->
+  <div id="navContent">
+    <div id="navLogo"><img src="_images/coolidge-logo.png" name="coolidge" id="coolidge">
+    </div><!--end navLogo-->
+    <div id="navSocial">
+    <div class="mail"><a href="mailto:coolidgerecords@gmail.com?subject=web-inquiry"><img src="_images/mail.png" alt="Email Coolidge records" name="mailMid" width="60" height="60" id="mailMid" onMouseOver="MM_swapImage('mailMid','','_images/mail-active.png',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="youTube"><a href="http://www.youtube.com/channel/UC2zDBqzDJ1XnWWWL7zMq1pg" target="_blank"><img src="_images/you-tube-icon.png" alt="Coolidge Records on YouTube" name="ytMid" width="60" height="60" id="ytMid" onMouseOver="MM_swapImage('ytMid','','_images/you-tube-icon-RO.png',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="fb"><a href="https://www.facebook.com/pages/Coolidge-Records/321565914618851" target="_blank"><img src="_images/fb.png" alt="Coolidge on Facebook" name="fbMid" width="60" height="60" id="fbMid" onMouseOver="MM_swapImage('fbMid','','_images/fb-active.png',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    </div><!--end navSocial-->
+    <nav>  
+    <div id="navMid">  
+   <div class="home"><a href="index.html"><img src="_images/home.jpg" alt="Coolidge Records Home" name="homeMid" id="homeMid" onMouseOver="MM_swapImage('homeMid','','_images/home-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+   <div class="bands"><a href="Coolidge-Records-Artists.html"><img src="_images/artists.jpg" alt="Coolidge Records Home" name="bandsMid" id="bandsMid" onMouseOver="MM_swapImage('bandsMid','','_images/artists-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+    <div class="catalog"><a href="#"><img src="_images/catalog-active.jpg" alt="Coolidge Records Catalog" name="catalogMid" id="catalogMid"></a></div>
+    <div class="release"><a href="Coolidge-Records-New-Releases.html"><img src="_images/release.jpg" alt="Coolidge Records New Releases" name="releaseMid" id="releaseMid" onMouseOver="MM_swapImage('releaseMid','','_images/release-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>    
+    <div class="contact"><a href="Contact-Coolidge-Records.html"><img src="_images/contact.jpg" alt="Contact Coolidge Records" name="contactMid" id="contactMid" onMouseOver="MM_swapImage('contactMid','','_images/contact-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+      </div><!--end navMid-->
+      <div id="navLg">
+      <div class="home"><a href="index.html"><img src="_images/homeLg.jpg" alt="Coolidge Records Home" name="homeLg" id="homeLg" onMouseOver="MM_swapImage('homeLg','','_images/home-active-lg.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+      <div class="bands"><a href="Coolidge-Records-Artists.html"><img src="_images/artistsLg.jpg" alt="Coolidge Records Home" name="bandsLg" id="bandsLg" onMouseOver="MM_swapImage('bandsLg','','_images/artistsLg-active.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+     <div class="catalog"><a href="#"><img src="_images/catalog-active-lg.jpg" alt="Coolidge Records Catalog" name="catalogLg" id="catalogLg"></a></div>
+     <div class="release"><a href="Coolidge-Records-New-Releases.html"><img src="_images/release-lg.jpg" alt="Coolidge Records New Releases" name="releaseLg" id="releaseLg" onMouseOver="MM_swapImage('releaseLg','','_images/release-active-lg.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+     <div class="contact"><a href="Contact-Coolidge-Records.html"><img src="_images/contactLg.jpg" alt="Contact Coolidge Records" name="contactLg" id="contactLg" onMouseOver="MM_swapImage('contactLg','','_images/contact-active-lg.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></div>
+      </div><!--end navLg-->
+      </nav>
+    </div><!--end navContent-->
+  </header>
+  <div id="mainContent2">
+   
+
+           <div id="catalogColumn"> <a href="Coolidge-Artists/Algebra-One-Blacksburg-Songs.html"><img src="_images/algebra-one-blacksburg.jpg" alt="Algebra One &quot;Blacksburg Songs 95-99&quot;" name="downslide" id="downslide"></a>
+    <p><a href="Coolidge-Artists/Algebra-One-Blacksburg-Songs.html">ALGEBRA ONE<br>
+      &quot;BLACKSBURG SONGS 95-99&quot;</a></p>    
+    </div>  
+
+           
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Anthrophobia-Pulse.html"><img src="_images/Anthrophobia-Pulse.jpg" alt="Anthrophobia &quot;Pulse&quot;" name="downslide" id="downslide"></a>
+    <p><a href="Coolidge-Artists/Anthrophobia-Pulse.html">ANTHROPHOBIA<br>
+      &quot;PULSE&quot;<br>
+Catalog #: CR0108</a></p>    
+    </div>  
+    
+    
+               
+           <div id="catalogColumn"> <a href="Coolidge-Artists/Aftertax-Discography-Vol-1.html"><img src="_images/aftertax-disc-1.jpg" alt="Aftertax &quot;Discography Volume 1&quot;" name="downslide" id="downslide"></a>
+    <p><a href="Coolidge-Artists/Aftertax-Discography-Vol-1.html">AFTERTAX<br>
+      &quot;DISCOGRAPHY VOLUME 1&quot;<br>
+Catalog #: CR0107</a></p>    
+    </div>  
+    
+       
+       <div id="catalogColumn"> <a href="Coolidge-Artists/RompeCabeza-Multiball.html"><img src="_images/RompeCabeza-multiball.jpg" alt="RompeCabeza Multiball" name="multiball" id="multiball"></a>
+    <p><a href="Coolidge-Artists/RompeCabeza-Multiball.html">RompeCabeza<br>
+      &quot;Multiball&quot;<br>
+Catalog #: CR0106</a></p>    
+    </div>
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Us-&-Them-Downslide.html"><img src="_images/us-and-them-downslide.jpg" alt="Us &amp; Them &quot;Downslide&quot;" name="downslide" id="downslide"></a>
+    <p><a href="Coolidge-Artists/Us-&-Them-Downslide.html" title="Us &amp; Them &quot;Downslide&quot;">Us &amp; Them<br>
+      &quot;Downslide&quot;<br>
+Catalog #: CR0105</a></p>    
+    </div>
+           
+
+   
+   
+   
+    <div id="catalogColumn">
+    <a href="Coolidge-Artists/Blunderbuss-Cutout-Bin-of-the-Digital-World.html"><img src="_images/blunderbuss-cutoutbin.jpg" alt="Blunderbuss &quot;Cutout Bin of the Digital World&quot;"></a>
+    <p><a href="Coolidge-Artists/Blunderbuss-Cutout-Bin-of-the-Digital-World.html" title="Blunderbuss &quot;Cutout Bin of the Digital World&quot;">Blunderbuss<br>
+      "<span class="bandTitle">Cutout Bin of the Digital World</span>"<br>
+    Catalog #: CR0103</a></p></div>
+
+
+   
+    <div id="catalogColumn">
+    <a href="Coolidge-Artists/Ex-Friends-Animal-Needs.html"><img src="_images/Ex-friends-animal-needs.jpg" alt="Ex Friends &quot;Animal Needs&quot;"></a>
+    <p><a href="Coolidge-Artists/Ex-Friends-Animal-Needs.html" title="Ex Friends &quot;Animal Needs&quot;">Ex Friends<br>
+      "Animal Needs"<br>
+    Catalog #: CR0103</a></p></div>
+
+
+        <div id="catalogColumn">
+    <a href="Coolidge-Artists/Herding-Cats-Volume-One.html"><img src="_images/Herding-Cats-Vol-One.jpg" alt="Herding Cats &quot;Volume One&quot;"></a>
+    <p><a href="Coolidge-Artists/Herding-Cats-Volume-One.html">Herding Cats<br>
+      "Volume One"<br>
+    Catalog #: CR0102</a></p></div>
+    
+    
+    <div id="catalogColumn">
+    <a href="Coolidge-Artists/The-Rusty-Nails-History-in-the-Rust-Vol-One.html"><img src="_images/Rusty-Nail-History-in-the-Rust.jpg" alt="The Rusty Nails &quot;History in the Rust, Vol. One&quot;"></a>
+    <p><a href="Coolidge-Artists/The-Rusty-Nails-History-in-the-Rust-Vol-One.html" title="The Rusty Nails &quot;History in the Rust, Vol. One&quot;">The Rusty Nails<br>
+      "History in the Rust, Vol. One"<br>
+    Catalog #: CR0101</a></p></div>
+    
+
+    <div id="catalogColumn">
+    <a href="Coolidge-Artists/The-Rusty-Nails-Nonlocality.html"><img src="_images/Rusty-Nails-Nonlocality.jpg" alt="The Rusty Nails &quot;Nonlocality&quot;"></a>
+    <p><a href="Coolidge-Artists/The-Rusty-Nails-Nonlocality.html" title="The Rusty Nails &quot;Nonlocality&quot;">The Rusty nails<br>
+      "Nonlocality"<br>
+      Catalog #: CR0099</a></p>    
+    </div>
+    
+       <div id="catalogColumn">
+    <a href="Coolidge-Artists/Speedwell-Start-to-Finish.html"><img src="_images/speedwell-start-to-finish.jpg" alt="Speedwell &quot;Start to Finish&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Speedwell-Start-to-Finish.html" title="Speedwell &quot;Start to Finish&quot;">Speedwell<br>
+      &quot;Start To Finish&quot;<br>
+      Catalog #: CR0098</a></p>    
+    </div>
+    
+           <div id="catalogColumn"> <a href="Coolidge-Artists/Kingdom-of-Rust-See-It-Through.html"><img src="_images/kingdom-of-rust-see-it-through.jpg" alt="Kingdom of Rust &quot;See it Through&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Kingdom-of-Rust-See-It-Through.html" title="Kingdom of Rust &quot;See it Through&quot;">Kingdom of Rust<br>
+      &quot;See it Through&quot;<br>
+Catalog #:    CR0090</a></p>    
+    </div>
+        
+           <div id="catalogColumn"> <a href="Coolidge-Artists/Squatweiler-Jack-Ball.html"><img src="_images/squatweiler-jack-ball.jpg" alt="Squatweiler &quot;Jack Ball&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Squatweiler-Jack-Ball.html" title="Squatweiler &quot;Jack Ball&quot;">Squatweiler<br>
+      &quot;Jack Ball&quot;<br>
+Catalog #:    CR0089</a></p>    
+    </div>
+    
+    
+               <div id="catalogColumn"> <a href="Coolidge-Artists/Clem-Hot-Philly-Nights.html"><img src="_images/Clem-Hot-Philly-Nights.jpg" alt="Clem &quot;Hot Philly Nights&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Clem-Hot-Philly-Nights.html" title="Clem &quot;Hot Philly Nights&quot;">Clem<br>
+      &quot;Hot Philly Nights&quot;<br>
+Catalog #:    CR0088</a></p>    
+    </div>
+    
+        
+               <div id="catalogColumn"> <a href="Coolidge-Artists/Soda-Can-Powertool.html"><img src="_images/Soda-Can-Power-Tool.jpg" alt="Soda Can &quot;Powertool&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Soda-Can-Powertool.html" title="Soda Can &quot;Powertool&quot;">Soda Can<br>
+      &quot;Powertool&quot;<br>
+Catalog #:    CR0075</a></p>    
+    </div>
+    
+    
+            
+               <div id="catalogColumn"> <a href="Coolidge-Artists/Squatweiler-My-Number-One.html"><img src="_images/squatweiler-my-number-one.jpg" alt="Squatweiler &quot;My Number One&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Squatweiler-My-Number-One.html" title="Squatweiler &quot;My Number One&quot;">Squatweiler<br>
+      &quot;My Number One&quot;<br>
+Catalog #:    CR0074</a></p>    
+    </div>
+    
+                
+               <div id="catalogColumn"> <a href="Coolidge-Artists/Squatweiler-Horsepower.html"><img src="_images/squatweiler-horsepower.jpg" alt="Squatweiler &quot;Horsepower&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Squatweiler-Horsepower.html" title="Squatweiler &quot;Horsepower&quot;">Squatweiler<br>
+      &quot;Horsepower&quot;<br>
+Catalog #:    CR0073</a></p>    
+    </div>
+    
+                   <div id="catalogColumn"> <a href="Coolidge-Artists/Squatweiler-New-Motherstamper.html"><img src="_images/squatweiler-new-motherstamper.jpg" alt="Squatweiler &quot;New Motherstamper&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Squatweiler-New-Motherstamper.html" title="Squatweiler &quot;New Motherstamper&quot;">Squatweiler<br>
+      &quot;New Motherstamper&quot;<br>
+Catalog #:    CR0072</a></p>    
+    </div>
+    
+                     <div id="catalogColumn"> <a href="Coolidge-Artists/Squatweiler-All-Tempo-Hot-Pants.html"><img src="_images/squatweiler-All-Tempo-Hot-Pants.jpg" alt="Squatweiler &quot;All Tempo Hot Pants&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Squatweiler-All-Tempo-Hot-Pants.html" title="Squatweiler &quot;All Tempo Hot Pants&quot;">Squatweiler<br>
+      &quot;All Tempo Hot Pants&quot;<br>
+Catalog #:    CR0071</a></p>    
+    </div>
+    
+                         <div id="catalogColumn"> <a href="Coolidge-Artists/Squatweiler-Full-Bladder.html"><img src="_images/squatweiler-full-bladder.jpg" alt="Squatweiler &quot;Full Bladder&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Squatweiler-Full-Bladder.html" title="Squatweiler &quot;Full Bladder&quot;">Squatweiler<br>
+      &quot;Full Bladder&quot;<br>
+Catalog #:    CR0070</a></p>    
+    </div>
+    
+                             <div id="catalogColumn"> <a href="Coolidge-Artists/Stranglmartin-For-The-Sake-Of-Argument.html"><img src="_images/Stranglmarin-For-The-Sake-Of-Argument.jpg" alt="Stranglmartin &quot;For The Sake Of Argument&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Stranglmartin-For-The-Sake-Of-Argument.html" title="Stranglmartin &quot;For The Sake Of Argument&quot;">Stranglmartin<br>
+      &quot;For The Sake Of Argument&quot;<br>
+Catalog #:    CR0056</a></p>    
+    </div>
+    
+                                 <div id="catalogColumn"> <a href="Coolidge-Artists/Stranglmartin-Wiregrass.html"><img src="_images/stranglmartin-wiregrass.jpg" alt="Stranglmartin &quot;Wiregrass&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Stranglmartin-Wiregrass.html" title="Stranglmartin &quot;Wiregrass&quot;">Stranglmartin<br>
+      &quot;Wiregrass&quot;<br>
+Catalog #:    CR0055</a></p>    
+    </div>
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Stranglmartin-Stranglmartin.html"><img src="_images/stranglmartin-stranglmartin.jpg" alt="Stranglmartin &quot;Stranglmartin&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Stranglmartin-Stranglmartin.html" title="Stranglmartin &quot;Stranglmartin&quot;">Stranglmartin<br>
+      &quot;Stranglmartin&quot;<br>
+Catalog #:    CR0054</a></p>    
+    </div>
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Deerheart-Queen-Worker-Drone.html"><img src="_images/Deerheart-Queen-Worker-Drone.jpg" alt="Deerhart &quot;Queen, Worker, Drone&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Deerheart-Queen-Worker-Drone.html" title="Deerhart &quot;Queen, Worker, Drone&quot;">Deerheart<br>
+      &quot;Queen, Worker, Drone&quot;<br>
+Catalog #:    CR0051</a></p>    
+    </div>
+    
+
+        <div id="catalogColumn"> <a href="Coolidge-Artists/Coolidge-Records-7-inch-collection.html"><img src="_images/coolidge-7-inch-collection.jpg" alt="Cooldge Records 7&quot; Collection" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Coolidge-Records-7-inch-collection.html" title="Cooldge Records 7&quot; Collection">Various Artists<br>
+      &quot;coolidge records 7&quot; collection&quot;<br>
+Catalog #:    CR0050</a></p>    
+    </div>
+
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-Live-at-Tramps.html"><img src="_images/LCP-live-at-tramps.jpg" alt="Lancaster County Prison &quot;Live at Tramps&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Lancaster-County-Prison-Live-at-Tramps.html" title="Lancaster County Prison &quot;Live at Tramps&quot;">Lancaster County Prison<br>
+      &quot;Live at Tramps&quot;<br>
+Catalog #:    CR0048</a></p>    
+    </div>
+    
+  <div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-Lancaster-County-Prison.html"><img src="_images/LCP-LCP.jpg" alt="Lancaster County Prison &quot;Lancaster County Prison&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Lancaster-County-Prison-Lancaster-County-Prison.html" title="Lancaster County Prison &quot;Lancaster County Prison&quot;">Lancaster County Prison<br>
+      &quot;Lancaster County Prison&quot;<br>
+Catalog #:    CR0047</a></p>    
+    </div>
+
+<div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-What-I-Love-About-America.html"><img src="_images/LCP-Love-about-america.jpg" alt="Lancaster County Prison &quot;What I Love About America&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Lancaster-County-Prison-What-I-Love-About-America.html" title="Lancaster County Prison &quot;What I Love About America&quot;">Lancaster County Prison<br>
+      &quot;What I Love About America&quot;<br>
+Catalog #:    CR0046</a></p>    
+    </div>
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Jake-and-the-Stiffs-Lauries-Other-Life.html"><img src="_images/jake-and-the-stiffs-laurie.jpg" alt="Jake and the Stiffs &quot;Laurie's Other Life&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Jake-and-the-Stiffs-Lauries-Other-Life.html" title="Jake and the Stiffs &quot;Laurie's Other Life&quot;">Jake and The Stiffs<br>
+      &quot;Laurie's Other Life&quot;<br>
+Catalog #:    CR0045</a></p>    
+    </div>
+    
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Tall-Man-Tall-Man.html"><img src="_images/tall-man-tall-man.jpg" alt="Tall Man &quot;Tall Man&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Tall-Man-Tall-Man.html" title="Tall Man &quot;Tall Man&quot;">Tall Man<br>
+      &quot;Tall Man&quot;<br>
+Catalog #:    CR0044</a></p>    
+    </div>
+    
+    
+  <div id="catalogColumn"> <a href="Coolidge-Artists/Snagglepuss-The-Sound-Report.html"><img src="_images/snagglepuss-sound-report.jpg" alt="Snagglepuss &quot;The Sound Report&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Snagglepuss-The-Sound-Report.html" title="Snagglepuss &quot;The Sound Report&quot;">Snagglepuss<br>
+      &quot;The Sound Report&quot;<br>
+Catalog #:    CR0043</a></p>    
+    </div>
+
+
+<div id="catalogColumn"> <a href="Coolidge-Artists/The-Rusty-Nails-The-New-Colony.html"><img src="_images/Rusty-Nails-New-Colony.jpg" alt="The Rusty Nails &quot;The New Colony&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/The-Rusty-Nails-The-New-Colony.html" title="The Rusty Nails &quot;The New Colony&quot;">The Rusty Nails<br>
+      &quot;The New Colony&quot;<br>
+Catalog #:    CR0041</a></p>    
+    </div>
+
+
+<div id="catalogColumn"> <a href="Coolidge-Artists/Snagglepuss-Parading-About-in-the-Altogether.html"><img src="_images/snagglepuss-alltogether.jpg" alt="Snagglepuss &quot;Parading About In the Altogether&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Snagglepuss-Parading-About-in-the-Altogether.html">Snagglepuss<br>
+      &quot;Parading About in the Altogether&quot;<br>
+Catalog #:    CR0040</a></p>    
+    </div>
+
+<div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-Every-Goddamn-Time.html"><img src="_images/LCP-Every-GD-time.jpg" alt="Lancaster County Prison &quot;Every Goddamn Time&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Lancaster-County-Prison-Every-Goddamn-Time.html" title="Lancaster County Prison &quot;Every Goddamn Time&quot;">Lancaster County Prison<br>
+      &quot;Every Goddamn Time&quot;<br>
+Catalog #:    CR0039</a></p>    
+    </div>
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-Every-Goddamn-Time.html"><img src="_images/Rusty-Nails-Vestiges.jpg" alt="The Rusty Nails &quot;Vestiges&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Lancaster-County-Prison-Every-Goddamn-Time.html" title="Lancaster County Prison &quot;Every Goddamn Time&quot;">The Rusty Nails<br>
+      &quot;Vestiages&quot;<br>
+Catalog #:    CR0038</a></p>    
+    </div>
+    
+        <div id="catalogColumn"> <a href="Coolidge-Artists/Empower-Exercising-the-Human-Spirit.html"><img src="_images/empower.jpg" alt="Various Artists &quot;Empower: Exercising the Human Spirit&quot;" name="startToFinish" id="startToFinish"></a>
+    <p>      <a href="Coolidge-Artists/Empower-Exercising-the-Human-Spirit.html" title="Various Artists &quot;Empower: Exercising the Human Spirit&quot;">Various Artists<br>      
+      &quot;Empower:      Exercising the Human Spirit&quot;<br>
+Catalog #:    CR0037</a></p>    
+    </div>
+    
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Aftertax-and-The-Rusty-Nails-Split.html"><img src="_images/Aftertax-Rusty-Nails-Split.jpg" alt="Aftertax / The Rusty Nails Split" name="startToFinish" id="startToFinish"></a>
+    <p> <a href="Coolidge-Artists/Aftertax-and-The-Rusty-Nails-Split.html" title="Aftertax / The Rusty Nails Split">Aftertax / The Rusty Nails Split<br>
+Catalog #:    CR0036</a></p>    
+    </div>
+    
+        
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-Death-Waltz-2000.html"><img src="_images/LCP-Death-Waltz.jpg" alt="Lancaster County Prison &quot;Death Waltz 2000&quot;" name="startToFinish" id="startToFinish"></a>
+    <p> <a href="Coolidge-Artists/Lancaster-County-Prison-Death-Waltz-2000.html" title="Lancaster County Prison &quot;Death Waltz 2000&quot;">Lancaster County Prison<br>
+      &quot;Death Waltz 2000&quot;<br>
+Catalog #:    CR0035</a></p>    
+    </div>
+
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/The-Rusty-Nails-No-Miracle-in-Ruins.html"><img src="_images/rusty-nails-No-Miracle-In-Ruins.jpg" alt="The Rusty Nails &quot;No Miracle in Ruins&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/The-Rusty-Nails-No-Miracle-in-Ruins.html" title="The Rusty Nails &quot;No Miracle in Ruins&quot;">The Rusty Nails<br>
+      &quot;No Miracle In Ruins&quot;<br>
+Catalog #:    CR0034</a></p>    
+    </div>
+
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Gladys-A-Small-Season.html"><img src="_images/Gladys-A-Small-Season.jpg" alt="Gladys &quot;A Small Season&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Gladys-A-Small-Season.html" title="Gladys &quot;A Small Season&quot;">Gladys<br>
+      &quot;A Small Season&quot;<br>
+Catalog #:    CR0033</a></p>    
+    </div>
+    
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Plow-United-The-Dustbin-of-History.html"><img src="_images/Plow-United-Dustbin-of-History.jpg" alt="Plow United &quot;The Dustbin of History&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/Plow-United-The-Dustbin-of-History.html" title="Plow United &quot;The Dustbin of History&quot;">Plow United<br>      &quot;The Dustbin of History&quot;<br>
+Catalog #:    CR0032</a></p>    
+    </div>
+    
+        
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/You-Don't-Have-to-Be-Tom-Jones-Vol-2.html"><img src="_images/tom-jones-vol-2.jpg" alt="Various Artists &quot;You Don't Have to Be Tom Jones Vol. 2&quot;" name="startToFinish" id="startToFinish"></a>
+    <p><a href="Coolidge-Artists/You-Don't-Have-to-Be-Tom-Jones-Vol-2.html" title="Various Artists &quot;You Don't Have to Be Tom Jones Vol. 2&quot;">Various Artists<br>
+      &quot;You Don't Have to Be Tom Jones Vol. 2&quot;<br>
+Catalog #:    CR0031</a></p>    
+    </div>
+    
+        
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Lancaster-County-Prison-Live-at-The-Village-Idiot.html"><img src="_images/LCP-live-at-idiot.jpg" alt="Lancaster County Prison &quot;Live at The Village Idiot&quot;" name="startToFinish" id="startToFinish"></a>
+    <p> <a href="Coolidge-Artists/Lancaster-County-Prison-Live-at-The-Village-Idiot.html" title="Lancaster County Prison &quot;Live at The Village Idiot&quot;">Lancaster County Prison<br>      &quot;Live at The Village Idiot&quot;<br>
+      Catalog #:    CR0030</a></p>    
+    </div>
+    
+        
+        
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><img src="_images/Treiops-Treyfid-All-Water.jpg" alt="Treiops Treyfid &quot;All Water&quot;" name="startToFinish" id="startToFinish"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html" title="Treiops Treyfid &quot;All Water&quot;">Treiops Treyfid<br>
+&quot;All Water&quot;</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0029</a></p>    
+    </div>
+
+
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Coolidge-50.html"><img src="_images/coolidge-50.jpg" alt="Various Artists &quot;Coolidge 50&quot;" name="coolidge" id="coolidge"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Coolidge-50.html" title="Various Artists &quot;Coolidge 50&quot;">Various Artists<br>
+&quot;Coolidge 50&quot;</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0028</a></p>    
+    </div>
+    
+    
+
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Super-Hi-Five-Strength-Control-Action.html"><img src="_images/super-hi-five-strength-control-action.jpg" alt="Super Hi-Five &quot;Strength Control Action&quot;" name="strengthControl" id="strengthControl"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Super-Hi-Five-Strength-Control-Action.html" title="Super Hi-Five &quot;Strength Control Action&quot;">Super Hi-Five<br>
+&quot;Strength control action&quot;</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0027</a></p>    
+    </div>
+        
+
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Soccer-The-Gospel-Truth.html"><img src="_images/soccer-gospel-truth.jpg" alt="Soccer &quot;The Gospel Truth&quot;" name="gospelTruth" id="gospelTruth"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Soccer-The-Gospel-Truth.html" title="Soccer &quot;The Gospel Truth&quot;">Soccer<br>
+&quot;The Gospel Truth&quot;</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0026</a></p>    
+    </div>
+    
+            
+
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Gladys-Lucky.html"><img src="_images/Gladys-Lucky.jpg" alt="Gladys &quot;Lucky&quot;" name="lucky" id="lucky"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Gladys-Lucky.html" title="Gladys &quot;Lucky&quot;">Gladys<br>
+&quot;Lucky&quot;</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0025</a></p>    
+    </div>
+    
+        
+            
+
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Beatnik-Termites-Lineage.html"><img src="_images/Beatnik-Termites-Lineage.jpg" alt="Beatnik Termites &quot;Lineage&quot;" name="linage" id="linage"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Beatnik-Termites-Lineage.html" title="Beatnik Termites &quot;Lineage&quot;">Beatnik Termites<br>
+&quot;Lineage&quot;</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0024</a></p>    
+    </div>
+    
+        
+        
+            
+
+            <div id="catalogColumn"> <a href="Coolidge-Artists/Super-Hi-Five-Sacface-Split.html"><img src="_images/super-hi-five-sacface-split.jpg" alt="Super Hi-Five / Sacface Split" name="superSac" id="superSac"></a>
+    <p> <span class="bandTitle"><a href="Coolidge-Artists/Super-Hi-Five-Sacface-Split.html" title="Super Hi-Five / Sacface Split">Super Hi-Five / Sacface Split</a></span><a href="Coolidge-Artists/Treiops-Treyfid-All-Water.html"><br>
+      Catalog #:    CR0023</a></p>    
+    </div>
+
+
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/The-Rusty-Nails-Self-Titled.html"><img src="_images/rusty-nails-self-titled.jpg" alt="The Rusty Nails &quot;The Rusty Nails&quot;"></a>
+      <p><a href="Coolidge-Artists/The-Rusty-Nails-Self-Titled.html" title="The Rusty Nails &quot;The Rusty Nails&quot;">The Rusty Nails<br>
+      &quot;The Rusty Nails&quot;<br>
+Catalog #: CR0022</a></p>    
+    </div>
+    
+    
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Crop-Circle-Mildreds-Split.html"><img src="_images/crop-circle-mildreds-split.jpg" alt="Crop Circle/Mildreds Split" name="cropMildreds" id="cropMildreds"></a>
+    <p><span class="bandTitle"><a href="Coolidge-Artists/Crop-Circle-Mildreds-Split.html" title="Crop Circle/Mildreds Split">Crop Circle/The Mildreds SPLIT</a></span><a href="Coolidge-Artists/Crop-Circle-Mildreds-Split.html"><br>
+Catalog #:    CR0021</a></p>    
+    </div>
+    
+        
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Soccer-La-Boheme-II-Electronic-Boogaloo.html"><img src="_images/soccer-La-Boheme.jpg" alt="Soccer &quot;La Bohème II: Electronic Boogaloo&quot;" name="boheme" id="boheme"></a>
+    <p><span class="bandTitle"><a href="Coolidge-Artists/Soccer-La-Boheme-II-Electronic-Boogaloo.html" title="Soccer &quot;La Bohème II: Electronic Boogaloo&quot;">Soccer<br>
+&quot;La Bohème II: Electronic Boogaloo&quot;</a></span><a href="Coolidge-Artists/Soccer-La-Boheme-II-Electronic-Boogaloo.html"><br>
+Catalog #:    CR0020</a><a href="Coolidge-Artists/Crop-Circle-Mildreds-Split.html"></a></p>    
+    </div>
+        
+        
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Jill-True-Zero-Split.html"><img src="_images/jill-true-zero-split.jpg" alt="Jill / True Zero 7&quot; Split" name="jillTrue" id="jillTrue"></a>
+    <p><span class="bandTitle"><a href="Coolidge-Artists/Jill-True-Zero-Split.html" title="Jill / True Zero 7&quot; Split">Jill / True Zero 7&quot; Split</a></span><a href="Coolidge-Artists/Soccer-La-Boheme-II-Electronic-Boogaloo.html"><br>
+Catalog #:    CR0019</a></p>    
+    </div>
+
+        
+        
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Plow-United-Sadi.html"><img src="_images/Plow-United-SADI.jpg" alt="Plow United &quot;Sadi&quot;" name="sadi" id="sadi"></a>
+    <p><a href="Coolidge-Artists/Plow-United-Sadi.html" title="Plow United &quot;Sadi&quot;">Plow United<br>
+      &quot;Sadi&quot;
+      <br>
+Catalog #:    CR0018</a><a href="Coolidge-Artists/Soccer-La-Boheme-II-Electronic-Boogaloo.html"></a></p>    
+    </div>
+    
+            
+        
+
+    
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Various-Artists-Homage.html"><img src="_images/homage.jpg" alt="Various Artists &quot;Homage&quot;" name="homage" id="homage"></a>
+    <p><a href="Coolidge-Artists/Various-Artists-Homage.html" title="Various Artists &quot;Homage&quot;">Various Artists<br>
+      &quot;Homage&quot; <br>
+Catalog #:    CR0017</a></p>    
+    </div>
+    
+
+        
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Clem-Wichita.html"><img src="_images/Clem-Wichita.jpg" alt="Clem &quot;Wichita&quot;" name="wichita" id="wichita"></a>
+    <p><a href="Coolidge-Artists/Clem-Wichita.html" title="Clem &quot;Wichita&quot;">Clem<br>
+      &quot;Wichita&quot; <br>
+Catalog #:    CR0015</a></p>    
+    </div>
+    
+    
+        
+        
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Meatjack-7-inch-Black-Juice-and-Loud-People.html"><img src="_images/meatjack-7.jpg" alt="Meatjack &quot;7&quot; Black Juice / Loud People&quot;" name="meatjack" id="meatjack"></a>
+    <p><a href="Coolidge-Artists/Meatjack-7-inch-Black-Juice-and-Loud-People.html" title="Meatjack &quot;7&quot; Black Juice / Loud People&quot;">Meatjack<br>
+      &quot;
+      7&quot; <STRONG>Black Juice / Loud People</STRONG>&quot;<br>
+Catalog #: CR0014</a></p>    
+    </div>
+        
+        
+        
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Jake-and-the-Stiffs-Spike.html"><img src="_images/jake-and-the-stiffs-spike.jpg" alt="Jake and the Stiffs &quot;Spike&quot;" name="spike" id="spike"></a>
+    <p><a href="Coolidge-Artists/Jake-and-the-Stiffs-Spike.html" title="Jake and the Stiffs &quot;Spike&quot;">Jake and the Stiffs<br>
+      &quot;Spike<STRONG></STRONG>&quot;<br>
+Catalog #: CR0013</a></p>    
+    </div>
+            
+ 
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Plow-United-and-Weston-Split.html"><img src="_images/Plow-United-Weston-Split.jpg" alt="Plow United / Weston Split" name="plowWeston" id="plowWeston"></a>
+    <p><a href="Coolidge-Artists/Plow-United-and-Weston-Split.html" title="Plow United / Weston Split">Plow United / Weston Split<br>
+Catalog #: CR0011</a></p>    
+    </div>
+                
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/EDO-Youre-So-Thin.html"><img src="_images/EDO-Youre-so-thin.jpg" alt="EDO &quot;You're so Thin&quot;" name="edo" id="edo"></a>
+    <p><a href="Coolidge-Artists/EDO-Youre-So-Thin.html" title="EDO &quot;You're so Thin&quot;">EDO<br>
+      &quot;You're So Thin&quot;
+      <br>
+Catalog #: CR0010</a></p>    
+    </div>
+    
+                    
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Drag-Ass-Still-Going.html"><img src="_images/drag-ass-still-going.jpg" alt="Drag-ass &quot;Still Going&quot;" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/Drag-Ass-Still-Going.html" title="Drag-ass &quot;Still Going&quot;">Drag-Ass<br>
+      &quot;Still Going&quot; <br>
+Catalog #: CR0008</a></p>    
+    </div>
+        
+                    
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/POD-Scribbler.html"><img src="_images/POD-Scribbler.jpg" alt="POD &quot;Scribbler&quot;" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/POD-Scribbler.html" title="POD &quot;Scribbler&quot;">POD<br>
+      &quot;Scribbler&quot; <br>
+Catalog #: CR0007</a></p>    
+    </div>
+    
+                        
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Haggis-Monument.html"><img src="_images/haggis-Monument.jpg" alt="Haggis &quot;Monument&quot;" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/Haggis-Monument.html" title="Haggis &quot;Monument&quot;">Haggis<br>
+      &quot;Monument&quot; <br>
+Catalog #: CR0006</a></p>    
+    </div>
+                            
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Plow-United-Dance.html"><img src="_images/Plow-United-Dance.jpg" alt="Plow United &quot;Dance (Better Than I've Ever Seen)&quot;" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/Plow-United-Dance.html" title="Plow United &quot;Dance (Better Than I've Ever Seen)&quot;">Plow United<br>
+      &quot;Dance (Better Than I've Ever Seen)&quot; <br>
+Catalog #: CR0005</a></p>    
+    </div>
+                                
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Anthrophobia-Poppy-Split.html"><img src="_images/Anthrophobia-release.jpg" alt="Anthrophobia/Poppy Split" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/Anthrophobia-Poppy-Split.html" title="Anthrophobia/Poppy Split">Anthrophobia/Poppy Split<br>
+Catalog #: CR0004</a></p>    
+    </div>
+                                    
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Spongegod-Mimi-Rogers.html"><img src="_images/spongegod-mimi-rogers.jpg" alt="Spongegod &quot;Mimi Rogers&quot;" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/Spongegod-Mimi-Rogers.html" title="Spongegod &quot;Mimi Rogers&quot;">Spongegod<br>
+      &quot;Mimi Rogers&quot;
+      <br>
+Catalog #: CR0003</a></p>    
+    </div>
+                                        
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/Plow-United-Tall-Man-Split.html"><img src="_images/Plow-United-Tallman-Split.jpg" alt="Plow United / Tall Man Split" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/Plow-United-Tall-Man-Split.html" title="Plow United / Tall Man Split">Plow United / Tall Man Split<br>
+Catalog #: CR0002</a></p>    
+    </div>
+                                            
+    
+        
+    <div id="catalogColumn"> <a href="Coolidge-Artists/You-Don't-Have-to-Be-Tom-Jones-Vol-1.html"><img src="_images/Tom-Jones-Vol-1.jpg" alt="You Don't Have to be Tom Jones Vol. 1" name="dragass" id="dragass"></a>
+    <p><a href="Coolidge-Artists/You-Don't-Have-to-Be-Tom-Jones-Vol-1.html" title="Various Artists &quot;You Don't Have to Be Tom Jones Vol. 1&quot;">Various Artists<br>
+      &quot;You Don't Have to Be Tom Jones Vol. 1&quot;<br>
+Catalog #: CR0001</a></p>    
+    </div>
+    
+    
+
+  </div><!--end mainContent-->
+
+<footer>
+  <div id="footerCont">
+  <h3>Coolidge Records</h3>
+  <p>5002 Penn Avenue, Pittsburgh, PA 15224</p>
+  <div id="footerNav">
+  <ul>
+  <li><a href="index.html">Home</a></li>
+   <li><a href="Coolidge-Records-Artists.html">Artists</a></li>
+  <li><a href="#">Catalog</a></li>
+  <li><a href="Coolidge-Records-New-Releases.html">New Releases</a></li>
+  <li><a href="Contact-Coolidge-Records.html">Contact</a></li>
+  </ul>
+  </div><!--end footerNav-->
+  </div><!--end footerCont-->
+</footer>
+</div><!--end gridContainer clearfix-->
+
+</body>
+</html>

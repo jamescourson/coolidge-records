@@ -1,0 +1,966 @@
+@charset "utf-8";
+@import url("Tiza/stylesheet.css");
+@import url("Umbrage/stylesheet.css");
+@import url("Vera/stylesheet.css");
+
+
+
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+* {
+	padding, margin: 0;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		6;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+body {
+	background: url(../_images/header-notes-tablet.png) top repeat-x, url(../_images/bg-texture.jpg) repeat;
+}
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+p a, p a:visited {
+	color: #009;
+	text-decoration: none;
+	border-bottom-width: thin;
+	border-bottom-style: dashed;
+	border-bottom-color: #009;
+}
+
+p a:hover, p a:active {
+	color: #003;
+	border-bottom-color: #003;
+}
+
+h1 {
+	font-family: 'Tiza';
+	font-size: 1.5em;
+	letter-spacing: .09em;
+}
+h2 {
+	font-family: 'Tiza';
+	font-size: 1em;
+	letter-spacing: .1em;
+}
+.border {
+	margin-top: 3%;
+	background-image: url(../_images/content-border.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.bandTitle {
+	margin-top: 30px;
+	margin-bottom: 1%;
+}
+
+header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-image:url(../_images/navbgMobile.png);
+	background-size: contain;	
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-height: 135px;
+	min-width: 320px;
+}
+p {
+    font-family: 'bitstream_vera_sansroman';
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+
+#navContent {
+	width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#navLogo, #navLogomid  {
+	display: none;
+
+}
+#navLogosm {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+nav {
+	display: none;
+}
+#mobileNav {
+	font-family: 'tizaregular', Verdana, Geneva, sans-serif;
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	background-color: #000;
+	background-repeat: repeat;
+	color: #fff;
+	text-align: center;
+	background-color: #000;
+}
+#navM {
+	clear: none;
+	position: absolute;
+	top: 45px;
+	width: 100%;
+	z-index: 10000;
+	line-height: 1.5em;
+	display: none;
+	text-transform: uppercase;
+	background-color: #000;
+	font-size: 1em;
+}
+#navM li {
+	clear: both;
+	float: none;
+	display: block;
+	line-height: 3em;
+	letter-spacing: .09em;
+}
+#navM a {
+	display: block;
+	color: #CCC;
+	text-decoration: none;
+}
+#navM a:hover {
+	background-color: #666666;
+	color: #fff;
+}
+#navM .current a {
+	color: #000;
+	background-color: #FFF;
+}
+#navM ul a {
+	padding: 0px;
+	display: block;
+}
+
+#navM ul {
+	width: 100%;
+	display: block;
+}
+#navM ul li {
+	display: block;
+	margin: 0;
+}
+#navM ul li a {
+	color: #ccc;
+}
+
+.padLeft {
+	font-family: 'tizaregular';
+	text-align: center;
+	letter-spacing: .09em;
+	font-size: 1.4em;
+	line-height: 2.5em;
+	cursor: pointer;
+}
+
+#navSocial {
+	display: none;
+}
+
+#mainContent, #mainContent2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#featureBorder {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-top: 15px;
+	width: 100%;
+	display: block;
+	min-height: 45px;
+	background-image: url(../_images/feature-box-top.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+#featureBorder2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	min-height: 45px;
+	background-image: url(../_images/feature-box-bottom.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+#slideshow {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #000;
+}
+#feature {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#speedwell {
+	clear: both;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	margin: 0;
+	display: block;
+	color: #fff;
+	text-align: center;
+	background-color: #000;
+	background-image: url(../_images/speedwell-cover.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+#speedwell p {
+	font-size: 90%;
+	text-align: left;
+	padding-left: 25px;
+	padding-right: 160px;
+}
+#catalog {
+	clear: none;
+	float: left;
+	margin-left: 20%;
+	width: 60%;
+	display: block;
+}
+
+#newReleases {
+	clear: none;
+	float: left;
+	margin-left: 20%;
+	width: 60%;
+	display: block;
+}
+
+#artistsColumn {
+	clear: none;
+	float: left;
+	margin-left: 2.5%;
+	margin-top: 4%;
+	width: 95%;
+	display: block;
+	text-align: center;
+}
+
+.title {
+	display: block;
+	margin-top: 35px;
+	background-image: url(../_images/content-border.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.releaseCover {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	margin-top: 10px;
+	width:100%;
+	display: block;
+}
+.releaseText {
+	clear: both;
+	float: none;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#column1 {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+	display: block;
+	text-align: center;
+}
+#column2 {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+	display: block;
+	text-align: center;
+}
+#subColumn1, #subColumn2 {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+}
+
+#artistsColumn p {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 2%;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
+#column1 p {
+	font-size: 1.1em;
+	text-align: justify;
+	font-weight: bold;
+	letter-spacing: .05em;
+}
+#column2 p {
+	font-size: 1em;
+	padding-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: .05em;
+	line-height: 1.8em;
+	padding-top: -10px;
+}
+footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	min-height: 200px;
+	background-image: url(../_images/mobile-footer.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	vertical-align: bottom;
+}
+#footerCont {
+	color: #fff;
+	text-align: center;
+	letter-spacing: .2em;
+}
+footer h3 {
+	font-family: 'tizaregular', Verdana, Geneva, sans-serif;
+	font-size: 1.1em;
+	margin-top: 125px;
+}
+footer p {
+	font-family: 'tizaregular', Verdana, Geneva, sans-serif;
+	font-size: .7em;
+	line-height: 2.2em;
+}
+
+#footerNav {
+	display: none;
+}
+
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	overflow:hidden;
+	width:51px;
+	height:51px;
+	border:none;
+	text-indent:100%;
+	background:url(../_images/ui.totop.png) no-repeat left top;
+}
+
+#toTopHover {
+	background:url(../_images/ui.totop.png) no-repeat left -51px;
+	width:51px;
+	height:51px;
+	display:block;
+	overflow:hidden;
+	float:left;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+	outline:none;
+}
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+body {
+	background: url(../_images/header-notes.png) top repeat-x, url(../_images/bg-texture.jpg) repeat;
+}
+
+header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-image: url(../_images/navbgTablet.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-height: 210px;
+}
+#navContent {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#navM {
+	top: 55px;
+}
+#navLogomid {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	max-height: 80px;
+}
+#midFb {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 25%;
+	display: block;
+}
+#midLogo {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	margin-top: 15px;
+	width: 50%;
+	display: block;
+}
+#midEmail {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 25%;
+	display: block;
+}
+#navLogo, #navLogosm  {
+	display: none;
+
+}
+#navSocial {
+	display: none;
+}
+#mainContent, #mainContent2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#catalog {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+}
+
+#newReleases {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	margin-top: 27px;
+	display: block;
+}
+
+
+.padLeft {
+	text-align: center;
+	letter-spacing: .09em;
+	font-size: 1.4em;
+	line-height: 3em;
+	cursor: pointer;
+}
+
+#artistsColumn {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	margin-top: 4%;
+	width: 42%;
+	display: block;
+}
+#column1 {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+	display: block;
+}
+#column2 {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+	display: block;
+}
+.releaseCover {
+	clear: none;
+	float: left;
+	margin-top: 10px;
+	margin-left: 2%;
+	width:30%;
+	display: block;
+}
+.releaseText {
+	clear: none;
+	float: left;
+	margin-left: 2%;
+	width: 58%;
+	display: block;
+}
+
+#column2 p {
+	font-size: 1em;
+	text-align: left;
+	font-weight: bold;
+	letter-spacing: .05em;
+}
+footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	min-height: 313px;
+	background: url(../_images/music-note-footer-header.png) center bottom no-repeat, url(../_images/footer-black-tile.png) left bottom repeat-x;
+}
+
+footer h3 {
+	font-size: 1.3em;
+	margin-top: 180px;
+}
+footer p {
+	font-size: 1em;
+	line-height: 2em;
+}
+
+#footerNav {
+	display:block;
+	margin-top: 15px;
+
+}
+#footerNav ul li {
+	font-family: 'tizaregular', Verdana, Geneva, sans-serif;
+	display: inline;
+	padding-left: 2%;
+	padding-right: 2%;
+	line-height: 1.8em;
+}
+#footerNav a, #footerNav a:visited {
+	color: #CCC;
+	text-decoration: none;
+	font-size: 70%;
+	border-bottom-width: thin;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCC;
+}
+
+#footerNav ul li a:hover, #footerNav ul li active {
+	color: #fff;
+}
+
+
+
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+
+header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-image: url(../_images/navbgLg.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-height: 216px;
+}
+
+#navContent {
+	width: 770px;
+	margin-left: auto;
+	margin-right: auto;
+}
+nav {
+	display: inline;
+}
+#navLg {
+	display: none;
+}
+.title {
+	display: block;
+	margin-top: 35px;
+	background-image: url(../_images/content-border.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	padding-bottom: 10px;
+	text-align: left;
+}
+.home {
+	margin-left: 75px;
+	margin-top: 10px;
+	width: 73px;
+	height: 38px;
+	float: left;
+}
+.bands {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 101px;
+	height: 38px;
+	float: left;
+}
+.catalog {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 106px;
+	height: 38px;
+	float: left;
+}
+.release {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 160px;
+	height: 38px;
+	float: left;
+}
+
+.contact {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 135px;
+	height: 38px;
+	float: left;
+}
+#navLogo {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	margin-top: 10px;
+	width: 20%;
+	display: block;
+}
+#navSocial {
+	clear: none;
+	float: left;
+	margin-left: 400px;
+	display: block;
+}
+.mail, .fb {
+	margin-top: 10px;
+	float: left;
+	height: 60px;
+	padding-right: 10px;
+	width: 60px;
+}
+
+
+#mobileNav, #navLogomid, #navLogosm {
+	display: none;
+}
+nav {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	margin-top: 0;
+}
+
+#mainContent {
+	clear: both;
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+	display: block;
+}
+#newReleases {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+	text-align: center;
+}
+
+#catalog {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+	text-align: center;
+}
+#feature {
+	float: none;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: auto;
+	background-color: #000;
+	max-width: 769px;
+	display: block;
+}
+#speedwell {
+	float: none;
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	background-color: #000;
+	background-image: url(../_images/speedwell-cover.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+#artistsColumn {
+	clear: none;
+	float: left;
+	margin-left: 2.4%;
+	width: 30%;
+	display: block;
+}
+#artistsColumn p {
+	font-size: 97%;
+}
+#column1 {
+	clear: none;
+	float: left;
+	margin-left: 8%;
+	width: 40%;
+	display: block;
+	text-align: left;
+}
+#column2 {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	width: 40%;
+	margin-top: 5%;
+	display: block;
+}
+#column2 p {
+	font-size: .9em;
+	text-align: left;
+	font-weight: bold;
+	letter-spacing: .05em;
+}
+#footerNav {
+	display:block;
+	margin-top: 25px;
+
+}
+#footerNav ul li {
+	display: inline;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+#footerNav a, #footerNav a:visited {
+	color: #CCC;
+	text-decoration: none;
+	font-size: 80%;
+	border-bottom-width: thin;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCC;
+}
+
+#footerNav ul li a:hover, #footerNav ul li active {
+	color: #fff;
+}
+
+
+
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+
+header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-image: url(../_images/navBg.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-height: 285px;
+}
+#navContent {
+	width: 1015px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#navLogo {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	margin-top: 15px;
+	width: 25%;
+	display: block;
+}
+#navMid {
+	display: none;
+}
+#navLg {
+	display: inline;
+}
+.home {
+	margin-left: 90px;
+	margin-top: 8px;
+	width: 95px;
+	height: 49px;
+	float: left;
+}
+.bands {
+	margin-top: 8px;
+	margin-left: 25px;
+	width: 131px;
+	height: 49px;
+	float: left;
+}
+.catalog {
+	margin-top: 8px;
+	margin-left: 25px;
+	width: 139px;
+	height: 49px;
+	float: left;
+}
+.release {
+	margin-top: 8px;
+	margin-left: 25px;
+	width: 210px;
+	height: 49px;
+	float: left;
+}
+.contact {
+	margin-top: 8px;
+	margin-left: 25px;
+	width: 177px;
+	height: 49px;
+	float: left;
+}
+#navSocial {
+	clear: none;
+	float: left;
+	margin-left: 500px;
+	display: block;
+}
+.mail, .fb {
+	margin-top: 40px;
+	float: left;
+	height: 60px;
+	padding-right: 20px;
+	width: 60px;
+}
+
+#mainContent {
+	clear: both;
+	float: left;
+	margin-left: 15%;
+	width: 70%;
+	display: block;
+}
+#mainContent2 {
+	clear: both;
+	float: left;
+	margin-left: 10%;
+	width: 80%;
+	display: block;
+}
+#column1 {
+	clear: none;
+	float: left;
+	margin-left: 5%;
+	width: 40%;
+	display: block;
+}
+#column2 {
+	clear: none;
+	float: left;
+	margin-left: 10%;
+	width: 40%;
+	margin-top: 3%;
+	display: block;
+}
+#column2 p {
+	font-size: 1em;
+	text-align: left;
+	font-weight: bold;
+	letter-spacing: .05em;
+}
+#newReleases {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+	text-align: center;
+}
+#catalog {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+	text-align: center;
+}
+}
